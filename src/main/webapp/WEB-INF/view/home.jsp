@@ -24,6 +24,18 @@
 	
 	<hr>
 	
+	<!-- Add a link to point to /leaders -->
+	<p>
+		<a href="${pageContext.request.contextPath}/leaders">Manager</a>(Only for Manager)
+	</p>
+
+	<!-- Add a link to point to /admin -->
+	<p>
+		<a href="${pageContext.request.contextPath}/admin">Admin</a>(Only for admin)
+	</p>
+	
+	<hr>
+	
 	<!-- Add a logout button -->
 	<form:form action="${pageContext.request.contextPath }/logout" method="POST">
 		
