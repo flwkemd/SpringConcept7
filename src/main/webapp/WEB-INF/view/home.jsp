@@ -22,17 +22,20 @@
 		Roles: <security:authentication property="principal.authorities"/>
 	</p>
 	
-	<hr>
 	
 	<!-- Add a link to point to /leaders -->
+	<security:authorize access="hasRole('MANAGER')">
 	<p>
 		<a href="${pageContext.request.contextPath}/leaders">Manager</a>(Only for Manager)
 	</p>
+	</security:authorize>
 
 	<!-- Add a link to point to /admin -->
+	<security:authorize access="hasRole('ADMIN')">
 	<p>
 		<a href="${pageContext.request.contextPath}/admin">Admin</a>(Only for admin)
 	</p>
+	</security:authorize>
 	
 	<hr>
 	
